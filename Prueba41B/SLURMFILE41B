@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#SBATCH --partition=GPU
+#SBATCH --job-name=412Bden25rep2
+#SBATCH --ntasks-per-node=10
+#SBATCH --output=output412Bden25rep2.out
+#SBATCH -o outfile412Bden25rep2.log 
+#SBATCH -e errfile412Bden25rep2.txt
+
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=natalia.huitzil@cimat.mx
+#
+
+# exportar el path hacia los ejecutables de Pyth
+export PATH=$PATH:/opt/anaconda3_titan/bin
+source /home/est_posgrado_natalia.huitzil/.bashrc
+conda activate compu21
+
+hostname
+date
+# Ejecutar script
+
+#cd /home/est_posgrado_natalia.huitzil/ST2/Prueba25B
+cd /home/thomas.batard/SeminarioTesis2/Prueba41B
+
+#cd /home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8
+#cd/home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8 runner.py
+#/home/est_posgrado_natalia.huitzil/.conda/envs/compu21/bin/python3.8 Cluster_Prueba7_Denoising3curvGaussian.py
+
+
+#python Cluster_Prueba41_UnknownOperatorV4_1B_den25_5K.py
+#python Cluster_Prueba41_DIP_0B_den25_4K.py
+#python Cluster_Prueba41_VectorialTotalVariation_2B_den25_8K.py
+#python Cluster_Prueba41_DIPOPP_3B_den25_4p7K.py
+
+python Cluster_Prueba41_VectorialTotalVariation_2B_den25_4p6K.py
+
+date
