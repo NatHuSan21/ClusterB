@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#SBATCH --partition=GPU
+#SBATCH --job-name=451Bden15esp2
+#SBATCH --ntasks-per-node=10
+#SBATCH --output=output451Bden15esp2.out
+#SBATCH -o outfile451Bden15esp2.log 
+#SBATCH -e errfile451Bden15esp2.txt
+
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=natalia.huitzil@cimat.mx
+#
+
+# exportar el path hacia los ejecutables de Pyth
+export PATH=$PATH:/opt/anaconda3_titan/bin
+source /home/est_posgrado_natalia.huitzil/.bashrc
+conda activate compu21
+
+hostname
+date
+# Ejecutar script
+
+#cd /home/est_posgrado_natalia.huitzil/ST2/Prueba25B
+cd /home/thomas.batard/SeminarioTesis2/Prueba45B
+
+#cd /home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8
+#cd/home/est_posgrado_natalia.huitzil/.conda/envs/myenv/bin/python3.8 runner.py
+#/home/est_posgrado_natalia.huitzil/.conda/envs/compu21/bin/python3.8 Cluster_Prueba7_Denoising3curvGaussian.py
+
+
+#python Cluster_Prueba45_UnknownOperatorV4_0B_den15_7p3K.py
+#python Cluster_Prueba45_UnknownOperatorV4OPP_1B_den15_7p9K.py
+#python Cluster_Prueba45_DIP_2B_den15_5p3K.py
+
+
+python Cluster_Prueba45_UnknownOperatorV4OPP_1B_den15_8K.py
+
+
+date
+
