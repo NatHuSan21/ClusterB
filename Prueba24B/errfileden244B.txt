@@ -1,0 +1,22 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/opt/slurm/var/spool/slurmd/job30502/slurm_script: line 23: cd: /home/est_posgrado_natalia.huitzil/ST2/Prueba24B: No such file or directory
+/home/thomas.batard/SeminarioTesis2/Prueba24B/models/dip_reg.py:925: UserWarning: __floordiv__ is deprecated, and its behavior will change in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values. To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor').
+  norm = torch.sqrt(0.00001*torch.ones((self.height,self.width)).type(self.dtype) + torch.maximum(torch.zeros((self.height,self.width)).type(self.dtype),norm_grad_red_squared + norm_grad_green_squared + norm_grad_blue_squared //
